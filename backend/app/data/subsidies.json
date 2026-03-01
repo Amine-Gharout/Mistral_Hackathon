@@ -1,0 +1,483 @@
+{
+  "metadata": {
+    "source": "ANAH Guide des aides financières 2026",
+    "source_url": "https://www.anah.gouv.fr/document/guide-des-aides-financieres-0126",
+    "effective_date": "2026-01-01",
+    "last_updated": "2026-02-23",
+    "notes": "Based on Arrêté du 14 janvier 2020, version in force since 01/01/2026"
+  },
+  "income_note": "Le ménage 'supérieur' (rose) n'est PAS éligible au parcours par geste — uniquement rénovation d'ampleur.",
+  "par_geste": [
+    {
+      "id": "pac_air_eau",
+      "label_fr": "Pompe à chaleur air/eau",
+      "label_en": "Air/water heat pump",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 5000,
+        "modeste": 4000,
+        "intermediaire": 3000,
+        "superieur": null
+      },
+      "plafond_depense": 12000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, b du 4",
+      "conditions": [
+        "Remplacement d'une chaudière gaz, fioul ou charbon",
+        "Installation par un artisan RGE",
+        "Logement de plus de 15 ans (résidence principale)"
+      ]
+    },
+    {
+      "id": "pac_geothermique",
+      "label_fr": "Pompe à chaleur géothermique ou solarothermique",
+      "label_en": "Geothermal or solar-thermal heat pump",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 11000,
+        "modeste": 9000,
+        "intermediaire": 6000,
+        "superieur": null
+      },
+      "plafond_depense": 18000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, c du 4",
+      "conditions": [
+        "Remplacement d'une chaudière existante",
+        "Installation par un artisan RGE",
+        "Logement de plus de 15 ans"
+      ]
+    },
+    {
+      "id": "pac_ecs",
+      "label_fr": "Chauffe-eau thermodynamique (PAC ECS)",
+      "label_en": "Thermodynamic water heater",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 1200,
+        "modeste": 800,
+        "intermediaire": 400,
+        "superieur": null
+      },
+      "plafond_depense": 3500,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, d du 4",
+      "conditions": [
+        "Installation par un artisan RGE",
+        "Logement de plus de 15 ans"
+      ]
+    },
+    {
+      "id": "chauffage_solaire",
+      "label_fr": "Système solaire combiné (chauffage + ECS)",
+      "label_en": "Combined solar heating system",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 10000,
+        "modeste": 8000,
+        "intermediaire": 4000,
+        "superieur": null
+      },
+      "plafond_depense": 16000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, e du 4",
+      "conditions": [
+        "Installation par un artisan RGE",
+        "Logement de plus de 15 ans"
+      ]
+    },
+    {
+      "id": "ecs_solaire",
+      "label_fr": "Chauffe-eau solaire individuel (CESI)",
+      "label_en": "Individual solar water heater",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 4000,
+        "modeste": 3000,
+        "intermediaire": 2000,
+        "superieur": null
+      },
+      "plafond_depense": 7000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, f du 4",
+      "conditions": [
+        "Installation par un artisan RGE",
+        "Logement de plus de 15 ans"
+      ]
+    },
+    {
+      "id": "capteurs_hybrides",
+      "label_fr": "Capteurs solaires hybrides (PVT)",
+      "label_en": "Hybrid solar PVT panels",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 2500,
+        "modeste": 2000,
+        "intermediaire": 1000,
+        "superieur": null
+      },
+      "plafond_depense": 4000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, g du 4",
+      "conditions": [
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "poele_granules",
+      "label_fr": "Poêle à granulés",
+      "label_en": "Pellet stove",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 1250,
+        "modeste": 1000,
+        "intermediaire": 750,
+        "superieur": null
+      },
+      "plafond_depense": 5000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, h du 4",
+      "conditions": [
+        "Remplacement d'une chaudière gaz, fioul ou charbon",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "poele_buches",
+      "label_fr": "Poêle à bûches",
+      "label_en": "Log stove",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 1250,
+        "modeste": 1000,
+        "intermediaire": 500,
+        "superieur": null
+      },
+      "plafond_depense": 4000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, i du 4",
+      "conditions": [
+        "Remplacement d'un appareil de chauffage existant",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "foyer_ferme_insert",
+      "label_fr": "Foyer fermé / insert à bûches ou granulés",
+      "label_en": "Closed fireplace / insert",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 1250,
+        "modeste": 750,
+        "intermediaire": 500,
+        "superieur": null
+      },
+      "plafond_depense": 4000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, j du 4",
+      "conditions": [
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "chaudiere_biomasse",
+      "label_fr": "Chaudière bois (bûches ou granulés)",
+      "label_en": "Wood boiler",
+      "category": "chauffage_ecs",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 5500,
+        "modeste": 4500,
+        "intermediaire": 3000,
+        "superieur": null
+      },
+      "plafond_depense": 16000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, k du 4",
+      "conditions": [
+        "Remplacement d'une chaudière gaz, fioul ou charbon",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "vmc_double_flux",
+      "label_fr": "VMC double flux",
+      "label_en": "Double-flow mechanical ventilation",
+      "category": "ventilation",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 2500,
+        "modeste": 2000,
+        "intermediaire": 1500,
+        "superieur": null
+      },
+      "plafond_depense": 6000,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, l du 4",
+      "conditions": [
+        "Installation par un artisan RGE",
+        "Logement de plus de 2 ans"
+      ]
+    },
+    {
+      "id": "isolation_rampants",
+      "label_fr": "Isolation des rampants de toiture et plafonds de combles",
+      "label_en": "Roof slope / attic ceiling insulation",
+      "category": "isolation",
+      "unit": "€/m2",
+      "amounts": {
+        "tres_modeste": 25,
+        "modeste": 20,
+        "intermediaire": 15,
+        "superieur": null
+      },
+      "plafond_depense": 75,
+      "plafond_unit": "€_ttc_per_m2",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, a du 5",
+      "conditions": [
+        "R ≥ 6 m².K/W pour les rampants",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "isolation_murs_ext",
+      "label_fr": "Isolation des murs par l'extérieur",
+      "label_en": "External wall insulation",
+      "category": "isolation",
+      "unit": "€/m2",
+      "amounts": {
+        "tres_modeste": 75,
+        "modeste": 60,
+        "intermediaire": 40,
+        "superieur": null
+      },
+      "plafond_depense": 150,
+      "plafond_unit": "€_ttc_per_m2",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, b du 5",
+      "conditions": [
+        "R ≥ 3.7 m².K/W",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "isolation_murs_int",
+      "label_fr": "Isolation des murs par l'intérieur",
+      "label_en": "Internal wall insulation",
+      "category": "isolation",
+      "unit": "€/m2",
+      "amounts": {
+        "tres_modeste": 25,
+        "modeste": 20,
+        "intermediaire": 15,
+        "superieur": null
+      },
+      "plafond_depense": 70,
+      "plafond_unit": "€_ttc_per_m2",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, c du 5",
+      "conditions": [
+        "R ≥ 3.7 m².K/W",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "isolation_toiture_terrasse",
+      "label_fr": "Isolation des toitures terrasses",
+      "label_en": "Flat roof insulation",
+      "category": "isolation",
+      "unit": "€/m2",
+      "amounts": {
+        "tres_modeste": 75,
+        "modeste": 60,
+        "intermediaire": 40,
+        "superieur": null
+      },
+      "plafond_depense": 180,
+      "plafond_unit": "€_ttc_per_m2",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, d du 5",
+      "conditions": [
+        "R ≥ 4.5 m².K/W",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "fenetres",
+      "label_fr": "Remplacement de fenêtres (simple → double vitrage)",
+      "label_en": "Window replacement (single → double glazing)",
+      "category": "isolation",
+      "unit": "€/équipement",
+      "amounts": {
+        "tres_modeste": 100,
+        "modeste": 80,
+        "intermediaire": 40,
+        "superieur": null
+      },
+      "plafond_depense": 1000,
+      "plafond_unit": "€_ttc_per_equip",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, e du 5",
+      "conditions": [
+        "Remplacement de simple vitrage uniquement",
+        "Uw ≤ 1.3 W/m².K",
+        "Installation par un artisan RGE"
+      ]
+    },
+    {
+      "id": "depose_cuve_fioul",
+      "label_fr": "Dépose de cuve à fioul",
+      "label_en": "Oil tank removal",
+      "category": "autre",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 1200,
+        "modeste": 800,
+        "intermediaire": 400,
+        "superieur": null
+      },
+      "plafond_depense": 4000,
+      "plafond_unit": "€_ttc",
+      "rge_required": false,
+      "legal_ref": "Annexe 1, a du 6",
+      "conditions": [
+        "En complément d'un changement de système de chauffage"
+      ]
+    },
+    {
+      "id": "raccordement_reseau_chaleur",
+      "label_fr": "Raccordement à un réseau de chaleur ou de froid",
+      "label_en": "Connection to a heat/cold network",
+      "category": "autre",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 1200,
+        "modeste": 800,
+        "intermediaire": 400,
+        "superieur": null
+      },
+      "plafond_depense": 1800,
+      "plafond_unit": "€_ttc",
+      "rge_required": false,
+      "legal_ref": "Annexe 1, b du 6",
+      "conditions": [
+        "Réseau alimenté à plus de 50% par des EnR&R"
+      ]
+    },
+    {
+      "id": "audit_energetique",
+      "label_fr": "Audit énergétique",
+      "label_en": "Energy audit",
+      "category": "audit",
+      "unit": "forfait",
+      "amounts": {
+        "tres_modeste": 500,
+        "modeste": 400,
+        "intermediaire": 300,
+        "superieur": null
+      },
+      "plafond_depense": 800,
+      "plafond_unit": "€_ttc",
+      "rge_required": true,
+      "legal_ref": "Annexe 1, 7",
+      "conditions": [
+        "Audit réalisé par un professionnel qualifié RGE",
+        "Logement de plus de 15 ans"
+      ]
+    }
+  ],
+  "renovation_ampleur": {
+    "description": "Parcours accompagné — rénovation globale avec gain d'au moins 2 classes DPE",
+    "source": "ANAH Guide 2026 — MaPrimeRénov' Parcours accompagné",
+    "eligibility": {
+      "dpe_entry_classes": ["E", "F", "G"],
+      "min_class_gain": 2,
+      "min_isolation_gestes": 2,
+      "accompagnateur_required": true,
+      "logement_age_min_years": 15,
+      "residence_principale": true
+    },
+    "tiers": [
+      {
+        "class_gain": 2,
+        "plafond_ht": 40000,
+        "rates": {
+          "tres_modeste": 80,
+          "modeste": 60,
+          "intermediaire": 45,
+          "superieur": 30
+        }
+      },
+      {
+        "class_gain": 3,
+        "plafond_ht": 55000,
+        "rates": {
+          "tres_modeste": 80,
+          "modeste": 60,
+          "intermediaire": 50,
+          "superieur": 35
+        }
+      },
+      {
+        "class_gain": 4,
+        "plafond_ht": 70000,
+        "rates": {
+          "tres_modeste": 80,
+          "modeste": 60,
+          "intermediaire": 50,
+          "superieur": 35
+        }
+      }
+    ],
+    "bonification_sortie_passoire": {
+      "description": "Bonus +10% si sortie de passoire thermique (F/G → au moins D)",
+      "bonus_pct": 10,
+      "condition": "DPE initial F ou G, DPE final ≤ D"
+    },
+    "plafond_global": {
+      "max_financing_pct": 90,
+      "note": "Le taux de financement total (aides publiques) ne peut excéder 90% du coût HT"
+    },
+    "accompagnement": {
+      "plafond": 2000,
+      "rates": {
+        "tres_modeste": 100,
+        "modeste": 80,
+        "intermediaire": 40,
+        "superieur": 20
+      }
+    }
+  },
+  "global_rules": {
+    "plafond_par_geste_5_ans": 20000,
+    "plafond_par_geste_5_ans_note": "Plafond cumulé de 20 000 € d'aides MaPrimeRénov' par geste par logement sur 5 ans glissants",
+    "tva_reduite": {
+      "taux": 5.5,
+      "condition": "Travaux d'amélioration de la qualité énergétique dans un logement de plus de 2 ans"
+    },
+    "logement_age_min_par_geste": 15,
+    "logement_age_min_ampleur": 15,
+    "residence_principale_required": true
+  }
+}

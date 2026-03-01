@@ -1,0 +1,403 @@
+{
+  "meta": {
+    "source": "Base Nationale des Zones à Faibles Émissions (BNZFE)",
+    "source_url": "https://transport.data.gouv.fr/datasets/base-nationale-consolidee-des-zones-a-faibles-emissions",
+    "last_updated": "2026-01-15",
+    "legal_note": "La loi de simplification 2025 (article 15 ter) prévoit la suppression de l'obligation ZFE pour les agglomérations respectant les seuils de qualité de l'air. Situation au 01/03/2026 : plusieurs ZFE maintenues volontairement par les collectivités."
+  },
+  "critair_classes": {
+    "0": { "label": "Crit'Air 0 (zéro émission)", "vehicles": "Électrique, hydrogène", "sticker_color": "vert" },
+    "1": { "label": "Crit'Air 1", "vehicles": "Essence Euro 5/6 (depuis 01/2011), Gaz, Hybrides", "sticker_color": "violet" },
+    "2": { "label": "Crit'Air 2", "vehicles": "Essence Euro 4 (01/2006–12/2010), Diesel Euro 5/6 (01/2011+)", "sticker_color": "jaune" },
+    "3": { "label": "Crit'Air 3", "vehicles": "Essence Euro 2/3 (01/1997–12/2005), Diesel Euro 4 (01/2006–12/2010)", "sticker_color": "orange" },
+    "4": { "label": "Crit'Air 4", "vehicles": "Diesel Euro 3 (01/2001–12/2005)", "sticker_color": "bordeaux" },
+    "5": { "label": "Crit'Air 5", "vehicles": "Diesel Euro 2 (01/1997–12/2000)", "sticker_color": "gris" },
+    "non_classe": { "label": "Non classé", "vehicles": "Immatriculés avant 01/1997 (essence) ou avant 01/1997 (diesel)", "sticker_color": null }
+  },
+  "zones": [
+    {
+      "id": "grand_paris",
+      "name": "Métropole du Grand Paris",
+      "status": "active",
+      "perimeter": "77 communes à l'intérieur de l'A86",
+      "main_communes": ["Paris", "Boulogne-Billancourt", "Montreuil", "Saint-Denis", "Nanterre", "Créteil", "Argenteuil"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2024-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2024-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4", "3", "2"], "since": "2024-01-01" }
+      },
+      "hours": "Tous les jours, 24h/24 (VL intra-A86)",
+      "enforcement": "active_fines",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": [
+        "Véhicules de collection (carte grise collection)",
+        "Véhicules de personnes handicapées (carte CMI)",
+        "Véhicules de secours et d'urgence",
+        "Pass ZFE temporaire (max 24 jours/an pour les Crit'Air 3)"
+      ],
+      "timeline": [
+        { "date": "2015-09-01", "event": "Création de la ZCR Paris intra-muros" },
+        { "date": "2019-07-01", "event": "Extension à 77 communes intra-A86" },
+        { "date": "2021-06-01", "event": "Interdiction Crit'Air 4 et 5" },
+        { "date": "2024-01-01", "event": "Interdiction Crit'Air 3" }
+      ]
+    },
+    {
+      "id": "lyon",
+      "name": "Métropole de Lyon",
+      "status": "active",
+      "perimeter": "Périmètre de la Métropole de Lyon (59 communes)",
+      "main_communes": ["Lyon", "Villeurbanne", "Vénissieux", "Bron", "Vaulx-en-Velin", "Caluire-et-Cuire"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2024-01-01" }
+      },
+      "hours": "Lundi-vendredi 6h-20h (VL), 24h/24 (PL/VUL)",
+      "enforcement": "active_fines",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": [
+        "Véhicules de collection",
+        "Véhicules PMR",
+        "Dérogation temporaire (max 52 jours/an)"
+      ],
+      "timeline": [
+        { "date": "2020-01-01", "event": "Création ZFE périmètre restreint" },
+        { "date": "2023-01-01", "event": "Extension à l'ensemble de la Métropole" },
+        { "date": "2024-01-01", "event": "Interdiction Crit'Air 4 et 5" },
+        { "date": "2025-01-01", "event": "Interdiction Crit'Air 3" }
+      ]
+    },
+    {
+      "id": "grenoble",
+      "name": "Grenoble-Alpes Métropole",
+      "status": "active",
+      "perimeter": "27 communes du cœur de la métropole grenobloise",
+      "main_communes": ["Grenoble", "Saint-Martin-d'Hères", "Échirolles", "Fontaine", "Meylan"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2023-07-01" },
+        "VUL": { "banned_critair": ["non_classe", "5", "4"], "since": "2024-07-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2024-07-01" }
+      },
+      "hours": "Tous les jours, 24h/24",
+      "enforcement": "active_fines",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": [
+        "Véhicules de collection",
+        "Véhicules PMR",
+        "Pass mobilité (52 jours/an)"
+      ],
+      "timeline": [
+        { "date": "2023-07-01", "event": "Création ZFE, interdiction Crit'Air 5 et NC" },
+        { "date": "2024-07-01", "event": "Interdiction Crit'Air 4 VUL/PL" }
+      ]
+    },
+    {
+      "id": "rouen",
+      "name": "Métropole Rouen Normandie",
+      "status": "active",
+      "perimeter": "13 communes de l'agglomération rouennaise",
+      "main_communes": ["Rouen", "Sotteville-lès-Rouen", "Le Petit-Quevilly", "Mont-Saint-Aignan"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2025-01-01" }
+      },
+      "hours": "Lundi-vendredi 6h-20h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique en cours"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "strasbourg",
+      "name": "Eurométropole de Strasbourg",
+      "status": "active",
+      "perimeter": "33 communes de l'Eurométropole",
+      "main_communes": ["Strasbourg", "Schiltigheim", "Illkirch-Graffenstaden", "Lingolsheim"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2025-01-01" }
+      },
+      "hours": "Tous les jours, 24h/24",
+      "enforcement": "active_fines",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Véhicules de collection", "Véhicules PMR", "Dérogations temporaires"],
+      "timeline": [
+        { "date": "2022-01-01", "event": "Interdiction Crit'Air 5" },
+        { "date": "2023-01-01", "event": "Interdiction Crit'Air 4" },
+        { "date": "2025-01-01", "event": "Interdiction Crit'Air 3" }
+      ]
+    },
+    {
+      "id": "toulouse",
+      "name": "Toulouse Métropole",
+      "status": "active",
+      "perimeter": "Périmètre de Toulouse Métropole",
+      "main_communes": ["Toulouse", "Colomiers", "Tournefeuille", "Blagnac", "Balma"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2024-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2024-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2024-01-01" }
+      },
+      "hours": "Lundi-vendredi 6h-20h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique en cours pour les VL"],
+      "timeline": [
+        { "date": "2024-01-01", "event": "Création ZFE, interdiction NC et Crit'Air 5" }
+      ]
+    },
+    {
+      "id": "montpellier",
+      "name": "Montpellier Méditerranée Métropole",
+      "status": "active",
+      "perimeter": "31 communes de la métropole",
+      "main_communes": ["Montpellier", "Castelnau-le-Lez", "Lattes", "Mauguio"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" }
+      },
+      "hours": "Tous les jours, 24h/24",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "nice",
+      "name": "Métropole Nice Côte d'Azur",
+      "status": "active",
+      "perimeter": "Commune de Nice et communes limitrophes",
+      "main_communes": ["Nice", "Saint-Laurent-du-Var", "Cagnes-sur-Mer"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2022-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5", "4"], "since": "2024-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2024-01-01" }
+      },
+      "hours": "Lundi-vendredi 7h-20h",
+      "enforcement": "active_fines",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Véhicules de collection", "Véhicules PMR"],
+      "timeline": [
+        { "date": "2022-01-01", "event": "Interdiction Crit'Air 5 et NC" },
+        { "date": "2024-01-01", "event": "Interdiction Crit'Air 4 VUL/PL" }
+      ]
+    },
+    {
+      "id": "aix_marseille",
+      "name": "Métropole d'Aix-Marseille-Provence",
+      "status": "active",
+      "perimeter": "Centre-ville de Marseille et zone portuaire",
+      "main_communes": ["Marseille", "Aix-en-Provence"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2022-09-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2022-09-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2023-09-01" }
+      },
+      "hours": "Tous les jours, 6h-20h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique prolongée pour les VL"],
+      "timeline": [
+        { "date": "2022-09-01", "event": "Création ZFE, interdiction Crit'Air 5 et NC" },
+        { "date": "2023-09-01", "event": "Interdiction Crit'Air 4 PL" }
+      ]
+    },
+    {
+      "id": "reims",
+      "name": "Grand Reims",
+      "status": "active",
+      "perimeter": "Commune de Reims",
+      "main_communes": ["Reims"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5", "4"], "since": "2024-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5", "4"], "since": "2024-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4", "3"], "since": "2024-01-01" }
+      },
+      "hours": "Lundi-vendredi 6h-20h",
+      "enforcement": "active_fines",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Véhicules de collection", "Véhicules PMR"],
+      "timeline": [
+        { "date": "2024-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "saint_etienne",
+      "name": "Saint-Étienne Métropole",
+      "status": "active",
+      "perimeter": "Commune de Saint-Étienne centre",
+      "main_communes": ["Saint-Étienne"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" }
+      },
+      "hours": "Lundi-vendredi 7h-19h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "clermont_ferrand",
+      "name": "Clermont Auvergne Métropole",
+      "status": "active",
+      "perimeter": "Centre de Clermont-Ferrand",
+      "main_communes": ["Clermont-Ferrand"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-07-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-07-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-07-01" }
+      },
+      "hours": "Lundi-vendredi 7h-19h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-07-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "bordeaux",
+      "name": "Bordeaux Métropole",
+      "status": "active",
+      "perimeter": "Intra-rocade de Bordeaux (28 communes)",
+      "main_communes": ["Bordeaux", "Mérignac", "Pessac", "Talence", "Bègles"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" }
+      },
+      "hours": "Lundi-vendredi 6h-20h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE, interdiction NC et Crit'Air 5" }
+      ]
+    },
+    {
+      "id": "lille",
+      "name": "Métropole Européenne de Lille",
+      "status": "active",
+      "perimeter": "90 communes de la MEL",
+      "main_communes": ["Lille", "Roubaix", "Tourcoing", "Villeneuve-d'Ascq", "Marcq-en-Barœul"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" }
+      },
+      "hours": "Tous les jours, 24h/24",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "rennes",
+      "name": "Rennes Métropole",
+      "status": "active",
+      "perimeter": "43 communes de Rennes Métropole",
+      "main_communes": ["Rennes", "Cesson-Sévigné", "Bruz", "Chantepie"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" }
+      },
+      "hours": "Lundi-vendredi 7h-20h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "nantes",
+      "name": "Nantes Métropole",
+      "status": "active",
+      "perimeter": "24 communes de Nantes Métropole",
+      "main_communes": ["Nantes", "Rezé", "Saint-Herblain", "Orvault"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" }
+      },
+      "hours": "Lundi-vendredi 7h-19h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "toulon",
+      "name": "Métropole Toulon Provence Méditerranée",
+      "status": "active",
+      "perimeter": "Commune de Toulon centre",
+      "main_communes": ["Toulon", "La Seyne-sur-Mer"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-01-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-01-01" }
+      },
+      "hours": "Lundi-vendredi 7h-19h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-01-01", "event": "Mise en place de la ZFE" }
+      ]
+    },
+    {
+      "id": "annecy",
+      "name": "Grand Annecy",
+      "status": "active",
+      "perimeter": "Agglomération d'Annecy",
+      "main_communes": ["Annecy", "Cran-Gevrier", "Seynod"],
+      "restrictions": {
+        "VL": { "banned_critair": ["non_classe", "5"], "since": "2025-07-01" },
+        "VUL": { "banned_critair": ["non_classe", "5"], "since": "2025-07-01" },
+        "PL": { "banned_critair": ["non_classe", "5", "4"], "since": "2025-07-01" }
+      },
+      "hours": "Lundi-vendredi 7h-19h",
+      "enforcement": "pedagogic",
+      "fine_amount_vl": 68,
+      "fine_amount_pl": 135,
+      "derogations": ["Phase pédagogique"],
+      "timeline": [
+        { "date": "2025-07-01", "event": "Mise en place de la ZFE" }
+      ]
+    }
+  ]
+}

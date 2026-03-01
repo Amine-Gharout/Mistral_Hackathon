@@ -1,0 +1,62 @@
+[
+  {
+    "chunk_id": 0,
+    "text": "MaPrimeRénov' est une aide de l'État pour la rénovation énergétique des logements. Elle est ouverte à tous les propriétaires occupants et bailleurs, sans conditions de revenus pour le parcours accompagné (rénovation d'ampleur). Le parcours par geste est réservé aux ménages des catégories bleu (très modestes), jaune (modestes) et violet (intermédiaires). Les ménages roses (revenus supérieurs) ne sont éligibles qu'au parcours accompagné. Source : ANAH Guide des aides financières 2026.",
+    "title": "MaPrimeRénov' — Présentation générale",
+    "page_number": null,
+    "chunk_type": "prose",
+    "aid_type": "mpr_par_geste",
+    "char_count": 487,
+    "effective_date": "2026-01-01"
+  },
+  {
+    "chunk_id": 1,
+    "text": "MaPrimeRénov' Parcours accompagné (rénovation d'ampleur) permet de financer une rénovation globale du logement. Conditions : gain d'au moins 2 classes DPE, au moins 2 gestes d'isolation, accompagnement obligatoire par un Accompagnateur Rénov'. Le programme a été réouvert le 23 février 2026. Plafonds de travaux : 40 000 € HT pour 2 classes, 55 000 € pour 3 classes, 70 000 € pour 4+ classes. Taux de financement : jusqu'à 80% pour les très modestes, 60% modestes, 50% intermédiaires, 35% supérieurs. Bonification sortie de passoire thermique : +10% si le logement passe de F/G à D minimum.",
+    "title": "MaPrimeRénov' Parcours accompagné",
+    "page_number": null,
+    "chunk_type": "prose",
+    "aid_type": "mpr_ampleur",
+    "char_count": 590,
+    "effective_date": "2026-01-01"
+  },
+  {
+    "chunk_id": 2,
+    "text": "L'Éco-prêt à taux zéro (Éco-PTZ) est un prêt sans intérêts pour financer les travaux de rénovation énergétique. Montants : 15 000 € pour 1 action, 25 000 € pour 2 actions, 30 000 € pour 3+ actions, 50 000 € pour une rénovation d'ampleur (performance globale). Durée de remboursement : jusqu'à 15 ans (20 ans pour la performance globale). Conditions : logement de plus de 2 ans, résidence principale, travaux par un professionnel RGE. L'Éco-PTZ est cumulable avec MaPrimeRénov' et les CEE.",
+    "title": "Éco-PTZ — Éco-prêt à taux zéro",
+    "page_number": null,
+    "chunk_type": "prose",
+    "aid_type": "eco_ptz",
+    "char_count": 488,
+    "effective_date": "2026-01-01"
+  },
+  {
+    "chunk_id": 3,
+    "text": "Les Certificats d'Économies d'Énergie (CEE) — Coup de pouce chauffage : les fournisseurs d'énergie versent des primes pour le remplacement d'une chaudière gaz, fioul ou charbon par un système de chauffage performant (PAC, biomasse, solaire, réseau de chaleur). Montants indicatifs : 5 000 € pour les très modestes, 4 000 € pour les modestes, 2 500 € pour les intermédiaires et supérieurs. Les montants varient selon le fournisseur. Les CEE sont cumulables avec MaPrimeRénov' par geste mais pas avec le parcours accompagné.",
+    "title": "CEE Coup de pouce chauffage",
+    "page_number": null,
+    "chunk_type": "prose",
+    "aid_type": "cee",
+    "char_count": 522,
+    "effective_date": "2026-01-01"
+  },
+  {
+    "chunk_id": 4,
+    "text": "Documents nécessaires pour une demande MaPrimeRénov' : 1. Dernier avis d'imposition (pour le RFR). 2. Devis détaillé des travaux signé par un professionnel RGE. 3. Justificatif de propriété (taxe foncière ou titre de propriété). 4. Diagnostic de Performance Énergétique (DPE) ou audit énergétique. 5. RIB pour le versement de l'aide. 6. Pour la rénovation d'ampleur : rapport de l'Accompagnateur Rénov'. La demande se fait sur le site maprimerenov.gouv.fr AVANT le début des travaux.",
+    "title": "Documents nécessaires — MaPrimeRénov'",
+    "page_number": null,
+    "chunk_type": "prose",
+    "aid_type": "general",
+    "char_count": 483,
+    "effective_date": "2026-01-01"
+  },
+  {
+    "chunk_id": 5,
+    "text": "Barème des plafonds de ressources 2026 pour MaPrimeRénov' : En Île-de-France (personne seule) : Bleu ≤ 24 031 €, Jaune ≤ 29 253 €, Violet ≤ 40 851 €, Rose > 40 851 €. Hors Île-de-France (personne seule) : Bleu ≤ 17 363 €, Jaune ≤ 22 259 €, Violet ≤ 31 185 €, Rose > 31 185 €. Pour un ménage de 4 personnes hors IDF : Bleu ≤ 35 676 €, Jaune ≤ 45 735 €, Violet ≤ 64 550 €. Pour chaque personne supplémentaire (hors IDF) : +5 151 € (bleu), +6 598 € (jaune), +9 357 € (violet).",
+    "title": "Barème des revenus MaPrimeRénov' 2026",
+    "page_number": null,
+    "chunk_type": "table",
+    "aid_type": "conditions_revenus",
+    "char_count": 473,
+    "effective_date": "2026-01-01"
+  }
+]

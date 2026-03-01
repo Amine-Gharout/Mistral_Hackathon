@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "description": "Aides locales et régionales complémentaires — sélection des principales régions",
+    "source": "ANIL (Agence nationale pour l'information sur le logement), sites des collectivités",
+    "last_updated": "2026-01-15",
+    "disclaimer": "Cette liste n'est pas exhaustive. Les montants et conditions peuvent varier. Contactez votre collectivité pour des informations à jour."
+  },
+  "regional_aids": [
+    {
+      "id": "idf_eco_renov",
+      "region": "Île-de-France",
+      "name_fr": "Éco-Rénovons Paris+",
+      "name_en": "Paris+ Eco-Renovation",
+      "type": "renovation",
+      "max_amount": 5000,
+      "conditions_fr": [
+        "Propriétaire occupant dans Paris intra-muros",
+        "Immeuble construit avant 1970",
+        "Gain énergétique d'au moins 30%"
+      ],
+      "cumulative_with_mpr": true,
+      "url": "https://www.paris.fr",
+      "departements": ["75"]
+    },
+    {
+      "id": "aura_renov",
+      "region": "Auvergne-Rhône-Alpes",
+      "name_fr": "Aide régionale à la rénovation énergétique",
+      "name_en": "Regional energy renovation aid",
+      "type": "renovation",
+      "max_amount": 3000,
+      "conditions_fr": [
+        "Propriétaire occupant en Auvergne-Rhône-Alpes",
+        "Travaux réalisés par un professionnel RGE",
+        "Résidence principale de plus de 15 ans"
+      ],
+      "cumulative_with_mpr": true,
+      "url": "https://www.auvergnerhonealpes.fr",
+      "departements": ["01", "03", "07", "15", "26", "38", "42", "43", "63", "69", "73", "74"]
+    },
+    {
+      "id": "occitanie_eco_cheque",
+      "region": "Occitanie",
+      "name_fr": "Éco-chèque logement Occitanie",
+      "name_en": "Occitanie Eco-voucher",
+      "type": "renovation",
+      "max_amount": 1500,
+      "conditions_fr": [
+        "Propriétaire occupant en Occitanie",
+        "Ressources inférieures aux plafonds ANAH",
+        "Travaux d'isolation ou de chauffage renouvelable"
+      ],
+      "cumulative_with_mpr": true,
+      "url": "https://www.laregion.fr/Eco-cheque-logement",
+      "departements": ["09", "11", "12", "30", "31", "32", "34", "46", "48", "65", "66", "81", "82"]
+    },
+    {
+      "id": "bretagne_renov",
+      "region": "Bretagne",
+      "name_fr": "Aide BAIL Rénovation Bretagne",
+      "name_en": "Brittany BAIL Renovation Aid",
+      "type": "renovation",
+      "max_amount": 2000,
+      "conditions_fr": [
+        "Propriétaire occupant en Bretagne",
+        "Logement de plus de 15 ans",
+        "Travaux avec gain DPE d'au moins 1 classe"
+      ],
+      "cumulative_with_mpr": true,
+      "url": "https://www.bretagne.bzh",
+      "departements": ["22", "29", "35", "56"]
+    },
+    {
+      "id": "grand_est_aide",
+      "region": "Grand Est",
+      "name_fr": "Climaxion — aide à la rénovation Grand Est",
+      "name_en": "Climaxion — Grand Est renovation aid",
+      "type": "renovation",
+      "max_amount": 3000,
+      "conditions_fr": [
+        "Propriétaire en Grand Est",
+        "Projet de rénovation globale (au moins 3 gestes)",
+        "Accompagnement par un conseiller France Rénov'"
+      ],
+      "cumulative_with_mpr": true,
+      "url": "https://www.climaxion.fr",
+      "departements": ["08", "10", "51", "52", "54", "55", "57", "67", "68", "88"]
+    },
+    {
+      "id": "nouvelle_aquitaine_renov",
+      "region": "Nouvelle-Aquitaine",
+      "name_fr": "ARTEE — aide régionale rénovation énergétique",
+      "name_en": "ARTEE — regional renovation aid",
+      "type": "renovation",
+      "max_amount": 2500,
+      "conditions_fr": [
+        "Propriétaire occupant en Nouvelle-Aquitaine",
+        "Ménage modeste ou très modeste",
+        "Rénovation globale avec accompagnement"
+      ],
+      "cumulative_with_mpr": true,
+      "url": "https://www.nouvelle-aquitaine.fr",
+      "departements": ["16", "17", "19", "23", "24", "33", "40", "47", "64", "79", "86", "87"]
+    },
+    {
+      "id": "lyon_metropole_velo",
+      "region": "Auvergne-Rhône-Alpes",
+      "name_fr": "Aide Métropole de Lyon — vélo cargo",
+      "name_en": "Lyon Metropolitan area — cargo bike aid",
+      "type": "mobility",
+      "max_amount": 800,
+      "conditions_fr": [
+        "Résider dans la Métropole de Lyon",
+        "Achat d'un vélo cargo ou vélo à assistance électrique",
+        "Vélo neuf ou reconditionné"
+      ],
+      "cumulative_with_mpr": false,
+      "url": "https://www.grandlyon.com",
+      "departements": ["69"]
+    },
+    {
+      "id": "idf_mobilite_velo",
+      "region": "Île-de-France",
+      "name_fr": "Aide Île-de-France Mobilités — vélo électrique",
+      "name_en": "Île-de-France Mobilités — e-bike aid",
+      "type": "mobility",
+      "max_amount": 500,
+      "conditions_fr": [
+        "Résider en Île-de-France",
+        "Achat d'un vélo à assistance électrique neuf",
+        "Cumul possible avec le bonus national"
+      ],
+      "cumulative_with_mpr": false,
+      "url": "https://www.iledefrance-mobilites.fr",
+      "departements": ["75", "77", "78", "91", "92", "93", "94", "95"]
+    },
+    {
+      "id": "paca_mobilite",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "name_fr": "Aide Sud Mobilité — véhicule propre",
+      "name_en": "Sud Mobilité — clean vehicle aid",
+      "type": "mobility",
+      "max_amount": 1000,
+      "conditions_fr": [
+        "Résider en région PACA",
+        "Achat ou location longue durée d'un véhicule électrique",
+        "Revenus inférieurs à 2 SMIC"
+      ],
+      "cumulative_with_mpr": false,
+      "url": "https://www.maregionsud.fr",
+      "departements": ["04", "05", "06", "13", "83", "84"]
+    },
+    {
+      "id": "hauts_de_france_renov",
+      "region": "Hauts-de-France",
+      "name_fr": "Picardie Pass Rénovation / Hauts-de-France aide rénovation",
+      "name_en": "Hauts-de-France renovation aid",
+      "type": "renovation",
+      "max_amount": 2000,
+      "conditions_fr": [
+        "Propriétaire occupant en Hauts-de-France",
+        "Ménage modeste ou très modeste",
+        "Travaux d'au moins 2 gestes d'isolation"
+      ],
+      "cumulative_with_mpr": true,
+      "url": "https://www.hautsdefrance.fr",
+      "departements": ["02", "59", "60", "62", "80"]
+    }
+  ]
+}

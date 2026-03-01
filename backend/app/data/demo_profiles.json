@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "description": "Profils de démonstration pour présenter l'application GreenRights",
+    "note": "Ces profils fictifs illustrent différentes situations typiques de citoyens français."
+  },
+  "profiles": [
+    {
+      "id": "marie",
+      "name": "Marie Dupont",
+      "description_fr": "Ménage modeste à Lyon — appartement énergivore + vieux diesel",
+      "description_en": "Low-income household in Lyon — energy-inefficient apartment + old diesel car",
+      "rfr": 32000,
+      "household_size": 2,
+      "is_ile_de_france": false,
+      "commune": "Lyon",
+      "departement": "69",
+      "property": {
+        "type": "appartement",
+        "dpe_class": "F",
+        "construction_year": 1975,
+        "surface_m2": 68,
+        "heating_type": "chaudiere_gaz",
+        "is_residence_principale": true,
+        "ownership_type": "occupant"
+      },
+      "vehicle": {
+        "critair": "4",
+        "fuel_type": "diesel",
+        "year": 2004,
+        "target_vehicle_type": "voiture_electrique"
+      },
+      "planned_renovations": [
+        { "geste_id": "pac_air_eau", "estimated_cost": 14000 },
+        { "geste_id": "isolation_murs_exterieur", "surface_m2": 50, "estimated_cost": 10000 },
+        { "geste_id": "fenetres_simple_double", "nb_equipements": 6, "estimated_cost": 5400 },
+        { "geste_id": "vmc_double_flux", "estimated_cost": 4500 }
+      ]
+    },
+    {
+      "id": "pierre",
+      "name": "Pierre Martin",
+      "description_fr": "Ménage intermédiaire en banlieue parisienne — maison DPE D, pas de problème de véhicule",
+      "description_en": "Middle-income household in Paris suburbs — DPE D house, no vehicle issue",
+      "rfr": 55000,
+      "household_size": 4,
+      "is_ile_de_france": true,
+      "commune": "Nanterre",
+      "departement": "92",
+      "property": {
+        "type": "maison",
+        "dpe_class": "D",
+        "construction_year": 1985,
+        "surface_m2": 120,
+        "heating_type": "chaudiere_gaz",
+        "is_residence_principale": true,
+        "ownership_type": "occupant"
+      },
+      "vehicle": {
+        "critair": "1",
+        "fuel_type": "essence",
+        "year": 2019,
+        "target_vehicle_type": null
+      },
+      "planned_renovations": [
+        { "geste_id": "pac_air_eau", "estimated_cost": 16000 },
+        { "geste_id": "isolation_rampants_toiture", "surface_m2": 60, "estimated_cost": 3600 }
+      ]
+    },
+    {
+      "id": "fatima",
+      "name": "Fatima Benali",
+      "description_fr": "Parent isolé très modeste à Grenoble — passoire thermique, pas de voiture",
+      "description_en": "Very low-income single parent in Grenoble — energy sieve home, no car",
+      "rfr": 18000,
+      "household_size": 3,
+      "is_ile_de_france": false,
+      "commune": "Grenoble",
+      "departement": "38",
+      "property": {
+        "type": "appartement",
+        "dpe_class": "G",
+        "construction_year": 1965,
+        "surface_m2": 55,
+        "heating_type": "convecteur_electrique",
+        "is_residence_principale": true,
+        "ownership_type": "occupant"
+      },
+      "vehicle": {
+        "critair": null,
+        "fuel_type": null,
+        "year": null,
+        "target_vehicle_type": "velo_electrique"
+      },
+      "planned_renovations": [
+        { "geste_id": "pac_air_eau", "estimated_cost": 12000 },
+        { "geste_id": "isolation_murs_exterieur", "surface_m2": 40, "estimated_cost": 8000 },
+        { "geste_id": "isolation_plancher_bas", "surface_m2": 55, "estimated_cost": 3300 },
+        { "geste_id": "vmc_double_flux", "estimated_cost": 4200 },
+        { "geste_id": "fenetres_simple_double", "nb_equipements": 5, "estimated_cost": 4500 }
+      ]
+    }
+  ]
+}

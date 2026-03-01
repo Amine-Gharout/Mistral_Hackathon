@@ -1,0 +1,79 @@
+# ──────────────────────────────────────────────
+# Python
+# ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# ──────────────────────────────────────────────
+# Node / Next.js
+# ──────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.cache/
+frontend/.vercel/
+frontend/.netlify/
+.npm
+*.tsbuildinfo
+
+# ──────────────────────────────────────────────
+# Environment & Secrets
+# ──────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+frontend/.env.local
+frontend/.env.*.local
+
+# ──────────────────────────────────────────────
+# Data / Runtime artifacts
+# ──────────────────────────────────────────────
+data/faiss/
+data/pdf/
+backend/app/data/anah_guide_2026.pdf
+
+# ──────────────────────────────────────────────
+# IDE / Editor
+# ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ──────────────────────────────────────────────
+# OS
+# ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ──────────────────────────────────────────────
+# Docker (local volumes)
+# ──────────────────────────────────────────────
+docker-compose.override.yml
+
+# ──────────────────────────────────────────────
+# Misc
+# ──────────────────────────────────────────────
+*.log
+*.pid
+.pytest_cache/
+.coverage
+htmlcov/
+backend/.git-hf/
+backend/.gitignore-hf
