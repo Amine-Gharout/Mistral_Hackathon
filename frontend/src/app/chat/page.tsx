@@ -21,6 +21,8 @@ import { ProfileSidebar } from '@/components/ProfileSidebar';
 import { MistralLogo, MistralLogoAnimated } from '@/components/MistralLogo';
 import Link from 'next/link';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -66,7 +68,7 @@ function ChatContent() {
     const initSession = async () => {
       try {
         // Try to get existing history
-        const res = await fetch(`/api/session/${currentSessionId}/history`);
+        const res = await fetch(`${API_URL}/api/session/${currentSessionId}/history`);
         if (res.ok) {
           const data = await res.json();
           if (data.messages && data.messages.length > 0) {
@@ -119,7 +121,7 @@ function ChatContent() {
     setMessages((prev) => [...prev, placeholderMsg]);
 
     try {
-      const res = await fetch('/api/chat/stream', {
+      const res = await fetch(`${API_URL}/api/chat/stream`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -127,8 +129,6 @@ function ChatContent() {
           message: trimmed,
           language: 'fr',
         }),
-        // @ts-expect-error - duplex needed for streaming request in some runtimes
-        duplex: 'half',
       });
 
       if (!res.ok) throw new Error('Chat request failed');
@@ -253,14 +253,14 @@ function ChatContent() {
   const downloadPDF = async () => {
     try {
       // First generate the report
-      await fetch('/api/report/generate', {
+      await fetch(`${API_URL}/api/report/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ session_id: currentSessionId }),
       });
 
       // Then download PDF
-      const res = await fetch(`/api/report/${currentSessionId}/pdf`);
+      const res = await fetch(`${API_URL}/api/report/${currentSessionId}/pdf`);
       if (!res.ok) throw new Error('PDF generation failed');
 
       const blob = await res.blob();
@@ -277,7 +277,7 @@ function ChatContent() {
 
   const shareReport = async () => {
     try {
-      const res = await fetch(`/api/report/${currentSessionId}/share`);
+      const res = await fetch(`${API_URL}/api/report/${currentSessionId}/share`);
       if (!res.ok) throw new Error('Share failed');
       const data = await res.json();
       await navigator.clipboard.writeText(data.share_url);

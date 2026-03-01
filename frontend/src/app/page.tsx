@@ -28,6 +28,8 @@ const DEMO_PROFILES = [
   },
 ];
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 export default function LandingPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -35,7 +37,7 @@ export default function LandingPage() {
   const startChat = async (demoProfile?: string) => {
     setLoading(true);
     try {
-      const res = await fetch('/api/session', {
+      const res = await fetch(`${API_URL}/api/session`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

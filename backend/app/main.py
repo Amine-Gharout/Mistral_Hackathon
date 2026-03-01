@@ -78,6 +78,7 @@ _cors_origins = [
     settings.FRONTEND_URL,
     "http://localhost:3000",
     "http://localhost:3001",
+    "https://greenrights-api.netlify.app",
 ]
 if settings.EXTRA_CORS_ORIGINS:
     _cors_origins.extend(
