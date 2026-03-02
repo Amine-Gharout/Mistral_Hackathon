@@ -1,4 +1,4 @@
-# GreenRights — AI-Powered French Green Transition Advisor
+# GreenRights — AI-Powered French Green Transition Advisor -- demo link: https://greenrights-api.netlify.app/
 
 An agentic AI application that helps French citizens discover and calculate their entitlements to green transition subsidies, powered by **Mistral AI** with deterministic tool-calling and real-time SSE streaming.
 
