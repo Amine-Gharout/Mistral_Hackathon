@@ -1,0 +1,15 @@
+fastapi==0.136.1
+uvicorn[standard]==0.46.0
+pydantic==2.13.3
+pydantic-settings==2.14.0
+python-dotenv==1.2.2
+mistralai==2.4.2
+faiss-cpu==1.13.2
+pymupdf==1.27.2.3
+fpdf2==2.8.7
+numpy==2.4.4
+tenacity==9.1.4
+orjson==3.11.8
+httpx==0.28.1
+pytest==8.2.0
+pytest-asyncio==0.23.7

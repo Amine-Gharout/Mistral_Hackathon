@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "source": "Service-Public.gouv.fr, Décret bonus écologique & prime à la conversion 2025-2026",
+    "effective_date": "2025-07-01",
+    "last_updated": "2026-01-01",
+    "notes": "Le bonus écologique classique a été remplacé par la prime coup de pouce VE (CEE) au 01/07/2025. La prime à la conversion reste active."
+  },
+  "prime_coup_de_pouce_ve": {
+    "id": "prime_coup_de_pouce_ve",
+    "label_fr": "Prime coup de pouce véhicules particuliers électriques",
+    "label_en": "Prime coup de pouce — electric vehicles",
+    "replaces": "bonus_ecologique",
+    "effective_date": "2025-07-01",
+    "funding": "CEE (Certificats d'Économies d'Énergie)",
+    "vehicle_type": "voiture_electrique",
+    "conditions": [
+      "Véhicule neuf 100% électrique",
+      "Prix d'achat ≤ 47 000 € TTC",
+      "Masse ≤ 2 400 kg",
+      "Score environnemental minimum requis"
+    ],
+    "amounts": [
+      {
+        "bracket_description": "Ménages modestes et intermédiaires (déciles 1-5)",
+        "rfr_per_part_max": 16300,
+        "amount": 4000
+      },
+      {
+        "bracket_description": "Autres ménages",
+        "rfr_per_part_max": null,
+        "amount": 3000
+      }
+    ],
+    "outremer_bonus": 1000,
+    "plafond_pct_prix": 27,
+    "source": "Décret n°2024-102 modifié, Service-Public.gouv.fr"
+  },
+  "bonus_ecologique_velo": {
+    "id": "bonus_velo_electrique",
+    "label_fr": "Bonus vélo électrique",
+    "label_en": "E-bike bonus",
+    "conditions": [
+      "Vélo neuf à assistance électrique",
+      "Ne dispose pas de batterie au plomb",
+      "Pas de revente dans l'année suivant l'achat"
+    ],
+    "amounts": [
+      {
+        "bracket_description": "RFR/part ≤ 7 100 € ou situation de handicap",
+        "rfr_per_part_max": 7100,
+        "amount": 400
+      },
+      {
+        "bracket_description": "RFR/part ≤ 15 400 €",
+        "rfr_per_part_max": 15400,
+        "amount": 300
+      }
+    ],
+    "plafond_pct_prix": 40,
+    "source": "Service-Public.gouv.fr"
+  },
+  "bonus_velo_cargo": {
+    "id": "bonus_velo_cargo",
+    "label_fr": "Bonus vélo cargo / adapté",
+    "label_en": "Cargo / adapted bike bonus",
+    "conditions": [
+      "Vélo cargo, pliant, ou adapté (avec ou sans assistance)",
+      "Pas de batterie au plomb (si électrique)"
+    ],
+    "amounts": [
+      {
+        "bracket_description": "RFR/part ≤ 7 100 € ou handicap",
+        "rfr_per_part_max": 7100,
+        "amount": 2000
+      },
+      {
+        "bracket_description": "RFR/part ≤ 15 400 €",
+        "rfr_per_part_max": 15400,
+        "amount": 1000
+      }
+    ],
+    "plafond_pct_prix": 40,
+    "source": "Service-Public.gouv.fr"
+  },
+  "prime_conversion": {
+    "id": "prime_conversion",
+    "label_fr": "Prime à la conversion",
+    "label_en": "Scrappage premium",
+    "description": "Prime pour la mise au rebut d'un ancien véhicule polluant et l'achat d'un véhicule propre",
+    "conditions_vehicule_mis_au_rebut": [
+      "Véhicule diesel immatriculé avant 2011 (Crit'Air 3, 4, 5 ou non classé)",
+      "Véhicule essence immatriculé avant 2006 (Crit'Air 3, 4, 5 ou non classé)",
+      "Appartenant au demandeur depuis au moins 1 an"
+    ],
+    "conditions_vehicule_acquis": [
+      "Véhicule électrique ou hybride rechargeable (autonomie ≥ 50 km)",
+      "Émissions ≤ 50 g CO2/km",
+      "Prix ≤ 47 000 € TTC"
+    ],
+    "amounts": [
+      {
+        "bracket_description": "RFR/part ≤ 7 700 € (très modeste)",
+        "rfr_per_part_max": 7700,
+        "amount_voiture_electrique": 5000,
+        "amount_voiture_hybride": 2500,
+        "gros_rouleur_bonus": 1000
+      },
+      {
+        "bracket_description": "RFR/part ≤ 14 089 € (modeste)",
+        "rfr_per_part_max": 14089,
+        "amount_voiture_electrique": 4000,
+        "amount_voiture_hybride": 1500,
+        "gros_rouleur_bonus": 1000
+      },
+      {
+        "bracket_description": "RFR/part ≤ 24 900 €",
+        "rfr_per_part_max": 24900,
+        "amount_voiture_electrique": 1500,
+        "amount_voiture_hybride": 0,
+        "gros_rouleur_bonus": 0
+      },
+      {
+        "bracket_description": "RFR/part > 24 900 €",
+        "rfr_per_part_max": null,
+        "amount_voiture_electrique": 0,
+        "amount_voiture_hybride": 0,
+        "gros_rouleur_bonus": 0
+      }
+    ],
+    "gros_rouleur_condition": "Distance domicile-travail > 30 km ou > 12 000 km/an",
+    "source": "Décret n°2024-102, Service-Public.gouv.fr"
+  },
+  "zfe_surprime": {
+    "id": "zfe_surprime",
+    "label_fr": "Surprime ZFE-m",
+    "label_en": "Low-Emission Zone top-up",
+    "description": "Surprime pour les personnes vivant ou travaillant dans une Zone à Faibles Émissions mobilité",
+    "amount": 1000,
+    "conditions": [
+      "Résider ou travailler dans une ZFE-m",
+      "Cumulable avec la prime à la conversion et le bonus écologique / prime coup de pouce VE",
+      "Aide de la collectivité locale ≥ 1 000 € (déclencheur)"
+    ],
+    "source": "Service-Public.gouv.fr"
+  },
+  "microcredit_mobilite": {
+    "id": "microcredit_mobilite",
+    "label_fr": "Microcrédit véhicule propre",
+    "label_en": "Clean vehicle microloan",
+    "description": "Prêt garanti par l'État pour les ménages exclus du crédit bancaire classique",
+    "amount_max": 8000,
+    "duree_max_mois": 84,
+    "taux": "plafonné, dépend de l'organisme",
+    "conditions": [
+      "Ménage en situation de précarité financière",
+      "Pas d'accès au crédit bancaire classique",
+      "Accompagnement par un organisme social habilité"
+    ],
+    "source": "Service-Public.gouv.fr"
+  }
+}

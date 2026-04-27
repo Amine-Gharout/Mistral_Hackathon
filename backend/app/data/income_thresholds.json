@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "source": "France Rénov' / ANAH barème officiel 2026",
+    "source_url": "https://france-renov.gouv.fr/bareme",
+    "effective_date": "2026-01-01",
+    "notes": "Revenus fiscaux de référence (RFR) de l'année N-1. Les seuils déterminent la couleur MaPrimeRénov'."
+  },
+  "brackets": ["tres_modeste", "modeste", "intermediaire", "superieur"],
+  "colors": {
+    "tres_modeste": "bleu",
+    "modeste": "jaune",
+    "intermediaire": "violet",
+    "superieur": "rose"
+  },
+  "ile_de_france": {
+    "label": "Île-de-France",
+    "thresholds": {
+      "1": { "tres_modeste": 24031, "modeste": 29253, "intermediaire": 40851 },
+      "2": { "tres_modeste": 35270, "modeste": 42933, "intermediaire": 60051 },
+      "3": { "tres_modeste": 42357, "modeste": 51564, "intermediaire": 71846 },
+      "4": { "tres_modeste": 49455, "modeste": 60208, "intermediaire": 84562 },
+      "5": { "tres_modeste": 56580, "modeste": 68877, "intermediaire": 96817 }
+    },
+    "per_extra_person": { "tres_modeste": 7116, "modeste": 8663, "intermediaire": 12257 }
+  },
+  "hors_ile_de_france": {
+    "label": "Hors Île-de-France",
+    "thresholds": {
+      "1": { "tres_modeste": 17363, "modeste": 22259, "intermediaire": 31185 },
+      "2": { "tres_modeste": 25393, "modeste": 32553, "intermediaire": 45842 },
+      "3": { "tres_modeste": 30540, "modeste": 39148, "intermediaire": 55196 },
+      "4": { "tres_modeste": 35676, "modeste": 45735, "intermediaire": 64550 },
+      "5": { "tres_modeste": 40835, "modeste": 52348, "intermediaire": 73907 }
+    },
+    "per_extra_person": { "tres_modeste": 5151, "modeste": 6598, "intermediaire": 9357 }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "description": "Matrice de compatibilité des aides — règles de cumul",
+    "source": "ANAH Guide des aides financières 2026, Service-Public.gouv.fr",
+    "effective_date": "2026-01-01"
+  },
+  "pairs": [
+    {
+      "aid_a": "mpr_par_geste",
+      "aid_b": "cee_coup_de_pouce",
+      "compatible": true,
+      "note_fr": "Les CEE (Coup de pouce) se cumulent avec MaPrimeRénov' par geste. Les deux aides portent sur le même équipement.",
+      "note_en": "CEE (Coup de pouce) can be combined with MaPrimeRénov' par geste for the same equipment.",
+      "cap": "Le cumul des aides ne peut excéder le coût TTC des travaux."
+    },
+    {
+      "aid_a": "mpr_par_geste",
+      "aid_b": "mpr_renovation_ampleur",
+      "compatible": false,
+      "note_fr": "Il faut choisir un seul parcours : soit par geste, soit rénovation d'ampleur. Les deux ne sont pas cumulables pour un même projet.",
+      "note_en": "You must choose one track: either individual actions (par geste) or whole-home retrofit (ampleur). They cannot be combined."
+    },
+    {
+      "aid_a": "mpr_par_geste",
+      "aid_b": "eco_ptz",
+      "compatible": true,
+      "note_fr": "L'Éco-PTZ peut financer le reste à charge après déduction de MaPrimeRénov'.",
+      "note_en": "Éco-PTZ can finance the remaining cost after MaPrimeRénov' deduction."
+    },
+    {
+      "aid_a": "mpr_renovation_ampleur",
+      "aid_b": "eco_ptz",
+      "compatible": true,
+      "note_fr": "L'Éco-PTZ 'Performance globale' (jusqu'à 50 000 €) est spécifiquement conçu pour accompagner une rénovation d'ampleur.",
+      "note_en": "The 'Global performance' Éco-PTZ (up to €50,000) is specifically designed to accompany a whole-home retrofit."
+    },
+    {
+      "aid_a": "mpr_renovation_ampleur",
+      "aid_b": "cee_coup_de_pouce",
+      "compatible": false,
+      "note_fr": "Les CEE Coup de pouce chauffage ne sont pas cumulables avec le parcours rénovation d'ampleur (les CEE sont déjà intégrés dans le calcul de l'aide).",
+      "note_en": "CEE Coup de pouce heating cannot be combined with the whole-home retrofit track (CEE are already factored into the aid calculation)."
+    },
+    {
+      "aid_a": "mpr_par_geste",
+      "aid_b": "tva_5_5",
+      "compatible": true,
+      "note_fr": "La TVA réduite à 5,5% s'applique automatiquement aux travaux éligibles, indépendamment de MaPrimeRénov'.",
+      "note_en": "The reduced 5.5% VAT applies automatically to eligible renovation works, independently of MaPrimeRénov'."
+    },
+    {
+      "aid_a": "mpr_par_geste",
+      "aid_b": "aides_locales",
+      "compatible": true,
+      "note_fr": "Les aides locales (région, département, commune) sont cumulables avec MaPrimeRénov' dans la limite du coût total des travaux.",
+      "note_en": "Local aids (region, department, municipality) can be combined with MaPrimeRénov' up to the total cost of works."
+    },
+    {
+      "aid_a": "mpr_renovation_ampleur",
+      "aid_b": "aides_locales",
+      "compatible": true,
+      "note_fr": "Les aides locales sont cumulables avec la rénovation d'ampleur dans la limite du coût total.",
+      "note_en": "Local aids can be combined with whole-home retrofit up to the total cost."
+    },
+    {
+      "aid_a": "prime_coup_de_pouce_ve",
+      "aid_b": "prime_conversion",
+      "compatible": true,
+      "note_fr": "La prime coup de pouce VE et la prime à la conversion sont cumulables.",
+      "note_en": "The EV incentive and scrappage premium can be combined."
+    },
+    {
+      "aid_a": "prime_coup_de_pouce_ve",
+      "aid_b": "zfe_surprime",
+      "compatible": true,
+      "note_fr": "La surprime ZFE s'ajoute à la prime coup de pouce VE pour les résidents/travailleurs en zone ZFE.",
+      "note_en": "The ZFE top-up is added to the EV incentive for ZFE residents/commuters."
+    },
+    {
+      "aid_a": "prime_conversion",
+      "aid_b": "zfe_surprime",
+      "compatible": true,
+      "note_fr": "La surprime ZFE s'ajoute à la prime à la conversion.",
+      "note_en": "The ZFE top-up is added to the scrappage premium."
+    },
+    {
+      "aid_a": "prime_coup_de_pouce_ve",
+      "aid_b": "bonus_velo",
+      "compatible": false,
+      "note_fr": "La prime coup de pouce VE (voiture) et le bonus vélo sont deux aides distinctes pour des véhicules différents — pas d'incompatibilité directe mais elles ne portent pas sur le même achat.",
+      "note_en": "The EV incentive (car) and e-bike bonus are separate aids for different vehicles."
+    },
+    {
+      "aid_a": "prime_conversion",
+      "aid_b": "microcredit_mobilite",
+      "compatible": true,
+      "note_fr": "Le microcrédit mobilité peut financer le reste à charge après les primes.",
+      "note_en": "The mobility microloan can finance the remaining cost after premiums."
+    }
+  ],
+  "global_rules": [
+    {
+      "id": "total_aid_cap",
+      "rule_fr": "Le cumul des aides publiques ne peut excéder 100% du coût total TTC des travaux.",
+      "rule_en": "Total public aid cannot exceed 100% of the total cost of works (including VAT)."
+    },
+    {
+      "id": "mpr_5_year_cap",
+      "rule_fr": "MaPrimeRénov' par geste : plafond de 20 000 € par logement sur une période de 5 ans glissants.",
+      "rule_en": "MaPrimeRénov' per action: €20,000 cap per dwelling over a rolling 5-year period.",
+      "amount": 20000,
+      "period_years": 5
+    },
+    {
+      "id": "renovation_ampleur_max_pct",
+      "rule_fr": "Rénovation d'ampleur : le taux d'aide maximal est de 80% du montant HT plafonné (pour les ménages très modestes).",
+      "rule_en": "Whole-home retrofit: maximum aid rate is 80% of the capped cost (for very low-income households).",
+      "max_pct": 80
+    }
+  ]
+}
