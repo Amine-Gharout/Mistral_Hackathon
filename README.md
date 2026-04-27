@@ -1,5 +1,8 @@
 # GreenRights — AI-Powered French Green Transition Advisor 
 
+> **Solo project** — built end-to-end by [Amine Gharout](https://github.com/Amine-Gharout)
+> during the Mistral AI Hackathon (March 2026).
+
 An agentic AI application that helps French citizens discover and calculate their entitlements to green transition subsidies, powered by **Mistral AI** with deterministic tool-calling and real-time SSE streaming.
 
 ---
@@ -189,8 +192,8 @@ User message → Mistral Large → [Tool Call] → Deterministic Calculator → 
 ### 1. Clone & set up environment
 
 ```bash
-git clone <your-repo-url>
-cd mistral
+git clone https://github.com/Amine-Gharout/greenrights.git
+cd greenrights
 
 python3.12 -m venv env
 source env/bin/activate
@@ -260,7 +263,7 @@ This starts both backend (`:8000`) and frontend (`:3000`).
 ### Step 0 — Push to GitHub
 
 ```bash
-cd mistral
+cd greenrights
 git init
 git add .
 git commit -m "Initial commit"
@@ -432,7 +435,7 @@ All financial data is **hardcoded in JSON files** derived from official governme
 ## Project Structure
 
 ```
-mistral/
+greenrights/
 ├── backend/
 │   ├── Dockerfile               # HF Spaces Docker build (port 7860)
 │   ├── README.md                # HF Spaces metadata (emoji, sdk, port)
@@ -513,6 +516,17 @@ mistral/
 | **JSON barème files** | Easy to update when government publishes new rates — no database migrations needed |
 | **FAISS (not a vector DB)** | Lightweight, no external service — the index is small enough (~500 chunks) to fit in memory |
 | **Next.js rewrites** | Frontend proxies `/api/*` to the backend — avoids CORS issues during local development |
+
+---
+
+## Known Limitations
+
+| Limitation | Notes |
+|---|---|
+| In-memory sessions only | Sessions are lost on server restart; a Redis layer would fix this for production |
+| SSE requires direct backend access | Netlify's edge buffers chunked streams; frontend must call HF Space directly |
+| FAISS index not hot-reloadable | Updating barème data requires a server restart to rebuild the index |
+| No authentication | Sessions are anonymous; anyone with a session ID can read it |
 
 ---
 

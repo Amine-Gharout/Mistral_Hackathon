@@ -133,85 +133,98 @@ async def run_agent_turn_stream(
 
     max_iterations = 10
     for iteration in range(max_iterations):
-        # First, do a non-streaming call to check if there are tool calls
-        # We need to handle tools before we can stream the final response
-        response = await client.chat.complete_async(
+        full_text = ""
+        tool_calls_by_index: dict[int, dict] = {}
+
+        stream = await client.chat.stream_async(
             model=settings.MISTRAL_MODEL,
             messages=messages,
             tools=TOOL_DEFINITIONS,
             tool_choice="auto",
         )
+        async for chunk in stream:
+            delta = chunk.data.choices[0].delta
 
-        choice = response.choices[0]
-        message = choice.message
+            if delta.content:
+                full_text += delta.content
+                yield f"data: {json.dumps({'type': 'token', 'content': delta.content}, ensure_ascii=False)}\n\n"
 
-        if message.tool_calls and len(message.tool_calls) > 0:
-            # Handle tool calls (non-streamed)
+            if delta.tool_calls:
+                for tc in delta.tool_calls:
+                    idx = getattr(tc, "index", 0)
+                    existing = tool_calls_by_index.setdefault(
+                        idx,
+                        {
+                            "id": None,
+                            "type": "function",
+                            "function": {"name": "", "arguments": ""},
+                        },
+                    )
+
+                    tc_id = getattr(tc, "id", None)
+                    if tc_id:
+                        existing["id"] = tc_id
+
+                    tc_type = getattr(tc, "type", None)
+                    if tc_type:
+                        existing["type"] = tc_type
+
+                    tc_function = getattr(tc, "function", None)
+                    if tc_function:
+                        name_part = getattr(tc_function, "name", None)
+                        args_part = getattr(tc_function, "arguments", None)
+                        if name_part:
+                            existing["function"]["name"] = name_part
+                        if args_part:
+                            existing["function"]["arguments"] += args_part
+
+        tool_calls = []
+        for idx in sorted(tool_calls_by_index.keys()):
+            tc = tool_calls_by_index[idx]
+            if not tc["function"]["name"]:
+                continue
+            if not tc["id"]:
+                tc["id"] = f"tool_call_{idx}"
+            tool_calls.append(tc)
+
+        if tool_calls:
             messages.append({
                 "role": "assistant",
-                "content": message.content or "",
-                "tool_calls": [
-                    {
-                        "id": tc.id,
-                        "type": "function",
-                        "function": {
-                            "name": tc.function.name,
-                            "arguments": tc.function.arguments,
-                        }
-                    }
-                    for tc in message.tool_calls
-                ],
+                "content": full_text,
+                "tool_calls": tool_calls,
             })
 
-            for tool_call in message.tool_calls:
-                tool_name = tool_call.function.name
+            for tool_call in tool_calls:
+                tool_name = tool_call["function"]["name"]
+                tool_args_str = tool_call["function"]["arguments"] or "{}"
                 try:
-                    arguments = json.loads(tool_call.function.arguments)
+                    arguments = json.loads(tool_args_str)
                 except json.JSONDecodeError:
                     arguments = {}
 
                 print(
                     f"[Agent-Stream] Calling tool: {tool_name}({json.dumps(arguments, ensure_ascii=False)[:200]})")
 
-                # Notify client that a tool is being called
                 yield f"data: {json.dumps({'type': 'tool', 'name': tool_name}, ensure_ascii=False)}\n\n"
 
                 result = execute_tool(tool_name, arguments)
-                _update_profile_from_tool(
-                    session, tool_name, arguments, result)
+                _update_profile_from_tool(session, tool_name, arguments, result)
 
                 messages.append({
                     "role": "tool",
                     "name": tool_name,
                     "content": result,
-                    "tool_call_id": tool_call.id,
+                    "tool_call_id": tool_call["id"],
                 })
 
-            # After tools, yield updated profile
             profile_data = _get_profile_dict(session)
             if profile_data:
                 yield f"data: {json.dumps({'type': 'profile', 'data': profile_data}, ensure_ascii=False)}\n\n"
-
-            # Continue the loop — model may want more tools or will give final answer
             continue
 
-        else:
-            # No tool calls → stream the final response
-            # Re-do this call as a stream
-            full_text = ""
-            stream = await client.chat.stream_async(
-                model=settings.MISTRAL_MODEL,
-                messages=messages,
-            )
-            async for chunk in stream:
-                delta = chunk.data.choices[0].delta
-                if delta.content:
-                    full_text += delta.content
-                    yield f"data: {json.dumps({'type': 'token', 'content': delta.content}, ensure_ascii=False)}\n\n"
-
-            session.add_message("assistant", full_text)
-            yield f"data: {json.dumps({'type': 'done'})}\n\n"
-            return
+        session.add_message("assistant", full_text)
+        yield f"data: {json.dumps({'type': 'done'})}\n\n"
+        return
 
     # Safety fallback
     fallback = "Je m'excuse, j'ai rencontré une difficulté technique. Pouvez-vous reformuler votre question ?"
