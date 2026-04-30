@@ -345,7 +345,7 @@ NEXT_PUBLIC_API_URL=https://YOUR_USERNAME-greenrights-api.hf.space
 #### 2.2 Deploy to Netlify
 
 **Option A — Netlify CLI:**
-
+ 
 ```bash
 npm install -g netlify-cli
 cd frontend
