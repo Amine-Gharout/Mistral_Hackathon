@@ -11,7 +11,7 @@ An agentic AI application that helps French citizens discover and calculate thei
 
 ### The Problem
 
-France offers **dozens of financial aids** to help citizens renovate their homes and switch to clean mobility — MaPrimeRénov', CEE Coup de pouce, Éco-PTZ, prime à la conversion, bonus vélo, ZFE top-ups, and more. But navigating these programs is a nightmare:
+France offers **dozens of financial aids** to help citizens renovate their homes and switch to clean mobility — MaPrimeRénov', CEE Coup de pouce, Éco-PTZ, prime à la conversion, bonus vélo, ZFE top-ups, and more. But navigating these programs is a nightmare: 
 
 - **Fragmented information** — rules are spread across ANAH guides, Service-Public.gouv.fr, ADEME resources, and local government websites
 - **Complex eligibility** — amounts depend on income brackets (4 tiers), geography (Île-de-France vs. rest), DPE energy class, type of work, and stacking rules between programs
