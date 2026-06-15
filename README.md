@@ -4,7 +4,7 @@
 > during the Mistral AI Hackathon (March 2026).
 
 An agentic AI application that helps French citizens discover and calculate their entitlements to green transition subsidies, powered by **Mistral AI** with deterministic tool-calling and real-time SSE streaming.
-
+ 
 ---
 
 ## Why GreenRights?
