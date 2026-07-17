@@ -8,7 +8,7 @@ An agentic AI application that helps French citizens discover and calculate thei
 ---
 
 ## Why GreenRights?
-
+ 
 ### The Problem
 
 France offers **dozens of financial aids** to help citizens renovate their homes and switch to clean mobility — MaPrimeRénov', CEE Coup de pouce, Éco-PTZ, prime à la conversion, bonus vélo, ZFE top-ups, and more. But navigating these programs is a nightmare: 
