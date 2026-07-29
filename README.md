@@ -15,7 +15,7 @@ France offers **dozens of financial aids** to help citizens renovate their homes
 
 - **Fragmented information** — rules are spread across ANAH guides, Service-Public.gouv.fr, ADEME resources, and local government websites
 - **Complex eligibility** — amounts depend on income brackets (4 tiers), geography (Île-de-France vs. rest), DPE energy class, type of work, and stacking rules between programs
-- **Constantly changing** — MaPrimeRénov' was suspended and reopened in February 2026; the Bonus Écologique was replaced by Prime Coup de Pouce VE in July 2025; ZFE timelines shift regularly
+- **Constantly changing** — MaPrimeRénov' was suspended and reopened in February 2026; the Bonus Écologique was replaced by Prime Coup de Pouce VE in July 2025; ZFE timelines shift regularly 
 - **Intimidating process** — many eligible citizens never apply because they don't know what they qualify for or how much they could receive
  
 > **Result:** Billions of euros in available subsidies go unclaimed every year.
