@@ -7,7 +7,7 @@ An agentic AI application that helps French citizens discover and calculate thei
  
 ---
 
-## Why GreenRights?
+## Why GreenRights? 
  
 ### The Problem
 
